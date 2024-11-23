@@ -4,123 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartFinance</title>
-    <link rel="stylesheet" href="SmartFinance/css/main.css">
-    <script defer src="main.js"></script>
-    <style>
-        @font-face {
-            font-family: 'Nunito';
-            src: url('fonts/Nunito-Regular.ttf') format('truetype'),
-                 url('fonts/Nunito-Bold.ttf') format('truetype');
-            font-weight: normal;
-        }
-        @font-face {
-            font-family: 'Nunito';
-            src: url('fonts/Nunito-Bold.ttf') format('truetype');
-            font-weight: bold;
-        }
-        @font-face {
-            font-family: 'Palanquin Dark';
-            src: url('fonts/PalanquinDark-Regular.ttf') format('truetype'),
-                 url('fonts/PalanquinDark-Bold.ttf') format('truetype');
-            font-weight: normal;
-        }
-        @font-face {
-            font-family: 'Palanquin Dark';
-            src: url('fonts/PalanquinDark-Bold.ttf') format('truetype');
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-	<script>
-        // Функция для редиректа на мобильную или десктопную версию
-        function redirectBasedOnDevice() {
-            // Проверяем, если устройство мобильное
-            if (window.innerWidth <= 800) {
-                // Если мобильное устройство, перенаправляем на мобильную версию
-                window.location.href = "/SmartFinance/index.html";
+    <script>
+     function redirectBasedOnDevice() {
+            if (window.innerWidth > 800) {
+                window.location.href = "SmartFinanceD/index.html";
             } else {
-                // Если десктоп, перенаправляем на десктопную версию
-                window.location.href = "/SmartFinance (stable)/index.html";
+                window.location.href = "SmartFinanceM/index.html";
             }
         }
 
-        // Вызов функции после загрузки страницы
+        // Вызываем функцию перенаправления при загрузке страницы
         window.onload = redirectBasedOnDevice;
+
+        // Вызываем функцию перенаправления при изменении размера окна
+        window.addEventListener('resize', function() {
+            clearTimeout(window.resizeTimeout);
+            window.resizeTimeout = setTimeout(redirectBasedOnDevice, 100);
+        });
     </script>
-    <div class="Frame1" style="width: 1920px; height: 3972px; position: relative; background: white;">
-        <div class="Rectangle1" style="width: 1918px; height: 900px; left: 0; top: 0; position: absolute; background: #5DA8D1;"></div>
-        <img class="Frame2" style="width: 919px; height: 900px; left: 0; top: 0; position: absolute;" src="SmartFinance/img/Frame2.png" alt="Frame 2" />
-        <div class="Rectangle2" style="width: 1918px; height: 932px; left: 0; top: 900px; position: absolute; background: #5DA8D1;"></div>
-        <div class="Contact" style="width: 113px; height: 59px; left: 205px; top: 1563px; position: absolute;">
-          <div class="Rectangle3" style="width: 113px; height: 59px; left: 0; top: 0; position: absolute; background: #ADE2FF; border-radius: 25px;"></div>
-          <button class="button Contact" style="width: 100%; height: 100%; left: 0; top: 0; position: absolute; background: transparent; border: none; color: black; font-size: 24px; font-family: 'Nunito'; font-weight: 700; display: flex; justify-content: center; align-items: center;">Contact</button>
-        </div>
-        <div class="MoreInfo1" style="width: 130px; height: 58px; left: 253px; top: 2639px; position: absolute;">
-          <div class="Rectangle27" style="width: 130px; height: 58px; left: 0; top: 0; position: absolute; background: #ADE2FF; border-radius: 25px;"></div>
-          <button class="button MoreInfo" style="width: 100%; height: 100%; left: 0; top: 0; position: absolute; background: transparent; border: none; color: black; font-size: 24px; font-family: 'Nunito'; font-weight: 700; display: flex; justify-content: center; align-items: center; white-space: nowrap;">More info</button>
-        </div>
-        <div class="MoreInfo2" style="width: 130px; height: 58px; left: 1220px; top: 2632px; position: absolute;">
-          <div class="Rectangle28" style="width: 130px; height: 58px; left: 0; top: 0; position: absolute; background: #ADE2FF; border-radius: 25px;"></div>
-          <button class="button MoreInfo" style="width: 100%; height: 100%; left: 0; top: 0; position: absolute; background: transparent; border: none; color: black; font-size: 24px; font-family: 'Nunito'; font-weight: 700; display: flex; justify-content: center; align-items: center; white-space: nowrap;">More info</button>
-        </div>
-        <div class="MoreInfo3" style="width: 130px; height: 58px; left: 1220px; top: 3277px; position: absolute;">
-          <div class="Rectangle29" style="width: 130px; height: 58px; left: 0; top: 0; position: absolute; background: #ADE2FF; border-radius: 25px;"></div>
-          <button class="button MoreInfo" style="width: 100%; height: 100%; left: 0; top: 0; position: absolute; background: transparent; border: none; color: black; font-size: 24px; font-family: 'Nunito'; font-weight: 700; display: flex; justify-content: center; align-items: center; white-space: nowrap;">More info</button>
-        </div>
-        <div class="MoreInfo4" style="width: 130px; height: 58px; left: 243px; top: 3277px; position: absolute;">
-          <div class="Rectangle30" style="width: 130px; height: 58px; left: 0; top: 0; position: absolute; background: #ADE2FF; border-radius: 25px;"></div>
-          <button class="button MoreInfo" style="width: 100%; height: 100%; left: 0; top: 0; position: absolute; background: transparent; border: none; color: black; font-size: 24px; font-family: 'Nunito'; font-weight: 700; display: flex; justify-content: center; align-items: center; white-space: nowrap;">More info</button>
-        </div>
-        <img class="Frame3" style="width: 999px; height: 932px; left: 919px; top: 900px; position: absolute;" src="SmartFinance/img/Frame3.png" alt="Frame 3" />
-        <img class="Vector" style="width: 228px; height: 21.31px; left: 971px; top: 21px; position: absolute;" src="SmartFinance/img/logo.svg" alt="Logo" />
-        <div style="left: 1580px; top: 16px; position: absolute;">
-          <div style="width: 130px; height: 59px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; left: 0; top: 0; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex;">
-            <button class="button Login" style="width: 100%; height: 100%; background: #709AB1; border: none; color: #2D434F; font-size: 24px; font-family: 'Nunito'; font-weight: 400; display: flex; justify-content: center; align-items: center; white-space: nowrap;">Log in</button>
-          </div>
-          <div style="width: 130px; height: 59px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; left: 146px; top: 0; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex;">
-            <button class="button SignUp" style="width: 100%; height: 100%; background: #709AB1; border: none; color: #2D434F; font-size: 24px; font-family: 'Nunito'; font-weight: 400; display: flex; justify-content: center; align-items: center; white-space: nowrap;">Sign up</button>
-          </div>
-        </div>
-        <div class="ManageYourFinancesWithSmartFinance" style="width: 479px; height: 158px; left: 50px; top: 1182px; position: absolute; color: black; font-size: 64px; font-family: 'Palanquin Dark'; font-weight: 400; line-height: 52px; word-wrap: break-word;">Manage Your Finances with SmartFinance</div>
-        <div class="TrackSpendingSeamlessly" style="width: 377px; height: 166px; left: 971px; top: 216px; position: absolute; color: black; font-size: 64px; font-family: 'Palanquin Dark'; font-weight: 400; line-height: 52px; word-wrap: break-word;">Track Spending Seamlessly</div>
-        <div class="KeepYourFinancesOnTrackWithSmartFinanceTheAppThatKeepsYourMoneyOrganizedSoYouDontHaveTo" style="width: 479px; height: 68px; left: 971px; top: 382px; position: absolute; color: black; font-size: 24px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">Keep your finances on track with SmartFinance – the app that keeps your money organized, so you don't have to.</div>
-        <div class="SmartFinanceLocatedInSpringfieldIlOffersAMobileAppToHelpYouManageYourMoneyTrackExpensesCreateBudgetsAndAchieveYourFinancialGoalsWithEaseDownloadNowAndTakeControlOfYourFinances" style="width: 522px; height: 201px; left: 50px; top: 1340px; position: absolute; color: black; font-size: 24px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">SmartFinance, located in Springfield, IL, offers a mobile app to help you manage your money. Track expenses, create budgets, and achieve your financial goals with ease. Download now and take control of your finances.</div>
-        <div class="SetTrackAndAchieveYourSavingsGoalsWithOurIntuitiveVisualAidsAndReminders" style="width: 479px; height: 84px; left: 1220px; top: 2548px; position: absolute; color: black; font-size: 20px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">Set, track, and achieve your savings goals with our intuitive visual aids and reminders.</div>
-        <div class="EffortlesslyTrackYourIncomeAndExpensesToMaintainControlOfYourFinancialHealth" style="width: 479px; height: 84px; left: 253px; top: 2555px; position: absolute; color: black; font-size: 20px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">Effortlessly track your income and expenses to maintain control of your financial health.</div>
-        <img class="Frame4" style="width: 579px; height: 372px; left: 253px; top: 2105px; position: absolute; border-radius: 26px;" src="SmartFinance/img/Frame4.png" alt="Frame 4" />
-        <img class="Frame5" style="width: 579px; height: 372px; left: 1220px; top: 2098px; position: absolute; border-radius: 26px;" src="SmartFinance/img/Frame5.png" alt="Frame 5" />
-        <div class="UnleashSmartFinancialPlanning" style="width: 848px; height: 66px; left: 191px; top: 1986px; position: absolute; color: black; font-size: 48px; font-family: 'Nunito'; font-weight: 700; word-wrap: break-word;">Unleash Smart Financial Planning</div>
-        <div class="SmartSavingsGoals" style="left: 1220px; top: 2493px; position: absolute; color: black; font-size: 40px; font-family: 'Nunito'; font-weight: 700; word-wrap: break-word;">Smart Savings Goals</div>
-        <div class="PersonalBudgetPlanner" style="left: 253px; top: 2500px; position: absolute; color: black; font-size: 40px; font-family: 'Nunito'; font-weight: 700; word-wrap: break-word;">Personal Budget Planner</div>
-        <div class="EffortlesslyTrackYourIncomeAndExpensesToMaintainControlOfYourFinancialHealth" style="width: 479px; height: 84px; left: 253px; top: 3181px; position: absolute; color: black; font-size: 20px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">Effortlessly track your income and expenses to maintain control of your financial health.</div>
-        <img class="Frame6" style="width: 579px; height: 372px; left: 253px; top: 2731px; position: absolute; border-radius: 26px;" src="SmartFinance/img/Frame6.png" alt="Frame 6" />
-        <div class="PersonalBudgetPlanner" style="left: 253px; top: 3126px; position: absolute; color: black; font-size: 40px; font-family: 'Nunito'; font-weight: 700; word-wrap: break-word;">Personal Budget Planner</div>
-        <div class="EffortlesslyTrackYourIncomeAndExpensesToMaintainControlOfYourFinancialHealth" style="width: 479px; height: 84px; left: 1220px; top: 3193px; position: absolute; color: black; font-size: 20px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">Effortlessly track your income and expenses to maintain control of your financial health.</div>
-        <img class="Frame7" style="width: 579px; height: 372px; left: 1220px; top: 2743px; position: absolute; border-radius: 26px;" src="SmartFinance/img/Frame7.png" alt="Frame 7" />
-        <div class="PersonalBudgetPlanner" style="left: 1220px; top: 3138px; position: absolute; color: black; font-size: 40px; font-family: 'Nunito'; font-weight: 700; word-wrap: break-word;">Personal Budget Planner</div>
-        <div class="Rectangle21" style="width: 1920px; height: 607px; left: 0; top: 3365px; position: absolute; background: #8CB6CC;"></div>
-        <div class="Rectangle22" style="width: 288px; height: 41px; left: 866px; top: 3557px; position: absolute; background: #709AB1; border-radius: 26px;"></div>
-        <div class="Rectangle24" style="width: 602px; height: 75px; left: 866px; top: 3641px; position: absolute; background: #709AB1; border-radius: 26px;"></div>
-        <div class="Rectangle23" style="width: 288px; height: 41px; left: 1180px; top: 3557px; position: absolute; background: #709AB1; border-radius: 26px;"></div>
-        <div class="ContactSmartFinanceAt1234MapleStreetSuite456SpringfieldIl62701UsaForSupport" style="width: 479px; height: 84px; left: 129px; top: 3557px; position: absolute; color: black; font-size: 20px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">Contact SmartFinance at 1234 Maple Street, Suite 456, Springfield, IL, 62701, USA for support.</div>
-        <div class="SmartFinanceAndAllAssociatedLogosAndProductNamesAreTrademarksOfSmartFinanceIncThisMaterialIsProvidedForInformationalPurposesOnlyAndDoesNotConstituteFinancialLegalOrTaxAdviceUsersAreEncouragedToConsultWithAProfessionalAdvisorForPersonalizedRecommendations2024SmartFinanceIncAllRightsReserved" style="width: 747px; height: 71px; left: 832px; top: 3856px; position: absolute; color: black; font-size: 13px; font-family: 'Palanquin Dark'; font-weight: 400; word-wrap: break-word;">“SmartFinance” and all associated logos and product names are trademarks of SmartFinance Inc. This material is provided for informational purposes only and does not constitute financial, legal, or tax advice. Users are encouraged to consult with a professional advisor for personalized recommendations. ©2024 SmartFinance Inc. All rights reserved.</div>
-        <div class="Name" style="width: 288px; height: 41px; left: 866px; top: 3557px; position: absolute;">
-            <input type="text" class="input-field" id="name" placeholder="Name" autocomplete="given-name" />
-        </div>
-        <div class="Email" style="width: 288px; height: 41px; left: 1180px; top: 3557px; position: absolute;">
-            <input type="email" class="input-field" id="email" placeholder="Email" autocomplete="email" />
-        </div>
-        <div class="Message" style="width: 602px; height: 75px; left: 866px; top: 3641px; position: absolute;">
-            <textarea id="message" placeholder="Message" autocomplete="off" style="width: 100%; height: 100%;"></textarea>
-        </div>
-        <div class="Submit" style="width: 117.26px; height: 36.15px; left: 868px; top: 3740px; position: absolute;">
-          <div class="Rectangle25" style="width: 117.26px; height: 36.15px; left: 0; top: 0; position: absolute; background: #ADE2FF; border-radius: 26px; border: 3px white solid;"></div>
-          <button class="button Submit" id="submitButton" style="width: 100%; height: 100%; left: 0; top: 0; position: absolute; background: transparent; border: none; color: black; font-size: 20px; font-family: 'Palanquin Dark'; font-weight: 400; display: flex; justify-content: center; align-items: center;">Submit</button>
-        </div>
-        <div class="GetInTouchWithUs" style="width: 503px; height: 64px; left: 129px; top: 3493px; position: absolute; color: black; font-size: 48px; font-family: 'Palanquin Dark'; font-weight: 400; line-height: 52px; word-wrap: break-word;">Get in Touch with Us</div>
-        <img class="Vector" style="width: 228px; height: 21.31px; left: 77px; top: 3881px; position: absolute;" src="SmartFinance/img/logo.svg" alt="Logo" />
-      </div>
+</head>
+<body>
+    <p>Redirecting...</p>
 </body>
 </html>
-
