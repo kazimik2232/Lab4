@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartFinance</title>
     <script>
-     function redirectBasedOnDevice() {
+        function redirectBasedOnDevice() {
+            console.log("Window width: ", window.innerWidth);
             if (window.innerWidth > 800) {
+                console.log("Redirecting to desktop version");
                 window.location.href = "SmartFinanceD/index.html";
             } else {
+                console.log("Redirecting to mobile version");
                 window.location.href = "SmartFinanceM/index.html";
             }
         }
